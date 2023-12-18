@@ -1,7 +1,16 @@
 FROM node:21-alpine
 WORKDIR /app
+
 COPY package*.json ./
+
 RUN npm install
-COPY . .
+
+COPY --chown=node:node . .
+
+RUN npm run build
+
 EXPOSE 8000
-CMD ["node", "server.ts", "build"]
+
+ENV HOST=0.0.0.0 PORT=8000
+
+CMD ["npm", "start"]
