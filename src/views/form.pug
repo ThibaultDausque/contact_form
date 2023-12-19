@@ -7,14 +7,14 @@ html(lang="en")
   body
     h1 Form
 
-    form(method="post" action="/postForm")
-      label name
+    form(method="post" action="/form")
+      label(for="name") name
       input(type="text" name="name")
       br  
-      label email
+      label(for="email") email
       input(type="text" name="email")
       br  
-      label message
-      textarea(rows="5" cols="30")
+      label(for="message") message
+      textarea(rows="5" cols="30" name="message")
       br  
       input(type="submit" value="post")

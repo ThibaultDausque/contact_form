@@ -4,8 +4,8 @@ services:
   postgresdb:
     image: postgres
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=adminuser
+      - POSTGRES_PASSWORD=adminpassword
       - POSTGRES_DB=mydatabase
     ports:
       - 5432:5432
