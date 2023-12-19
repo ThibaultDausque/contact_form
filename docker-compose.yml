@@ -38,7 +38,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - ./src:/usr/src/app/src
+      - ./src:/app/src
 
 volumes:
   db:
